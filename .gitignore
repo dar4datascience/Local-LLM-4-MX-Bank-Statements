@@ -52,3 +52,5 @@ rsconnect/
 .Renviron
 *.pdf
 *.json
+
+.Renviron
