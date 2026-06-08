@@ -1,0 +1,27 @@
+[project]
+name = "mx-bank-statements"
+version = "0.1.0"
+description = "Local LLM-powered bank statement parser with DuckDB and Shiny dashboard"
+requires-python = ">=3.11"
+dependencies = [
+    "shiny>=1.0.0",
+    "great-tables>=0.13.0",
+    "duckdb>=1.0.0",
+    "ollama>=0.3.0",
+    "pdfplumber>=0.11.0",
+    "pytesseract>=0.3.10",
+    "pdf2image>=1.16.0",
+    "Pillow>=10.0.0",
+    "pydantic>=2.0.0",
+    "playwright>=1.40.0",
+    "pandas>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+]
