@@ -46,7 +46,7 @@ Be concise and helpful. If asked to query the database, provide the SQL query th
         
         try:
             result = ollama.chat(
-                model="llama3.2",
+                model="qwen2.5:3b",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_msg}

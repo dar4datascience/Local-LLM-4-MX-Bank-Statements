@@ -93,7 +93,7 @@ Bank Statement Text:
 JSON array of transactions:"""
 
 
-def extract_transactions(text: str, source_file: Path, model: str = "llama3.2") -> list[Transaction]:
+def extract_transactions(text: str, source_file: Path, model: str = "qwen2.5:3b") -> list[Transaction]:
     """
     Extract transactions using Ollama with structured output.
     """

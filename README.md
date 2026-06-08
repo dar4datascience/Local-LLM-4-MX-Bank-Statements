@@ -47,8 +47,8 @@ cd Local-LLM-4-MX-Bank-Statements
 # Install dependencies
 uv sync
 
-# Pull recommended Ollama model
-ollama pull llama3.2
+# Pull recommended Ollama model (optimized for Spanish)
+ollama pull qwen2.5:3b
 ```
 
 ## Usage
@@ -120,11 +120,13 @@ app/               # Shiny dashboard
 
 ## Ollama Models
 
-Recommended: `llama3.2` (default) or `mistral`
+**Default: `qwen2.5:3b`** — 3B params, excellent Spanish support, fast, ~2GB RAM
 
-For better accuracy with Spanish text:
-```bash
-ollama pull mistral
-```
+Alternative models:
+- `qwen2.5:7b` — Better accuracy, ~4.5GB RAM
+- `gemma2:2b` — Lighter, ~1.5GB RAM
+- `mistral:7b` — Good Spanish, ~4GB RAM
 
-Then update `pipeline/llm_extractor.py` to use `model="mistral"`.
+To switch models, update `model=` parameter in:
+- `pipeline/llm_extractor.py` (line 96)
+- `app/modules/chat_assistant.py` (line 49)
