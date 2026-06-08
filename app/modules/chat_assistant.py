@@ -1,6 +1,6 @@
 from shiny import module, ui, render, reactive
 import ollama
-from ..db import get_db_schema
+from app.db import get_db_schema
 
 
 @module.ui

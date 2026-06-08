@@ -1,6 +1,6 @@
 from shiny import App, ui
-from modules.transactions_table import transactions_table_ui, transactions_table_server
-from modules.chat_assistant import chat_assistant_ui, chat_assistant_server
+from .modules.transactions_table import transactions_table_ui, transactions_table_server
+from .modules.chat_assistant import chat_assistant_ui, chat_assistant_server
 
 
 app_ui = ui.page_navbar(

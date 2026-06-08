@@ -1,7 +1,7 @@
 from shiny import module, ui, render, reactive
 from great_tables import GT
 import pandas as pd
-from ..db import get_transactions
+from app.db import get_transactions
 
 
 @module.ui
