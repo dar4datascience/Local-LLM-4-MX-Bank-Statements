@@ -1,6 +1,6 @@
 from datetime import date
 from enum import Enum
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict
 
 
 class TransactionType(str, Enum):
@@ -9,16 +9,8 @@ class TransactionType(str, Enum):
 
 
 class Transaction(BaseModel):
-    date: date
-    description: str
-    amount: float
-    currency: str = "MXN"
-    type: TransactionType
-    card_name: str
-    source_file: str
-    
-    class Config:
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "date": "2024-01-15",
                 "description": "OXXO COMPRA",
@@ -29,3 +21,12 @@ class Transaction(BaseModel):
                 "source_file": "bbva_nomina_2024_01.pdf"
             }
         }
+    )
+    
+    date: date
+    description: str
+    amount: float
+    currency: str = "MXN"
+    type: TransactionType
+    card_name: str
+    source_file: str

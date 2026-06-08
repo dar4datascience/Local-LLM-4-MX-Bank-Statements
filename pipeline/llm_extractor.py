@@ -5,6 +5,11 @@ from .schema import Transaction, TransactionType
 
 
 BANK_PROMPTS = {
+    "hsbc_credito": {
+        "keywords": ["HSBC"],
+        "type": TransactionType.CREDIT,
+        "card_name": "HSBC Credito"
+    },
     "bbva_nomina": {
         "keywords": ["BBVA", "Nómina", "Cuenta de nómina"],
         "type": TransactionType.DEBIT,
@@ -14,11 +19,6 @@ BANK_PROMPTS = {
         "keywords": ["BBVA", "Crédito", "Tarjeta de crédito"],
         "type": TransactionType.CREDIT,
         "card_name": "BBVA Credito"
-    },
-    "hsbc_credito": {
-        "keywords": ["HSBC", "Crédito"],
-        "type": TransactionType.CREDIT,
-        "card_name": "HSBC Credito"
     },
     "rappi": {
         "keywords": ["Rappi", "RappiCard"],
